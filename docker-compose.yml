@@ -12,11 +12,14 @@ services:
       - "5001:5001"
 
 
-  frontend:  
-    build: ./frontend  
-    container_name: frontend  
-    restart: always  
-    ports:  
-      - "5173:5173"  
+frontend:
+    build:
+      context: ./frontend
+      args:
+        VITE_API_URL: http://13.60.19.245:5001/api
+    container_name: frontend
+    restart: always
+    ports:
+      - "5173:5173"
     depends_on:
       - backend

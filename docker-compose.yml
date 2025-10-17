@@ -16,7 +16,7 @@ services:
     build:
       context: ./frontend
       args:
-        VITE_API_URL: http://backend:5001/api
+        VITE_API_URL: http://13.60.19.245:5001/api
     container_name: frontend
     restart: always
     ports:

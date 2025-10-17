@@ -16,7 +16,7 @@ const PORT = process.env.PORT || 5001;
 
 app.use(
   cors({
-    origin: 'http://13.60.19.245:5173',
+    origin: '*',
   }),
 );
 
